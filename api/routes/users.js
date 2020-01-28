@@ -8,12 +8,12 @@ const User = require('../models/user');
 const Notes = require('../models/note')
 
 router.post('/signup', (req, res, next) => {
-    User.find({ email: req.body.email })
+    User.find({ username: req.body.username })
         .exec()
         .then(user => {
             if (user.length >= 1) {
                 return res.status(422).json({
-                    message: 'Email already in use..'
+                    message: 'Username already in use..'
                 });
             } else {
                 bcrypt.hash(req.body.password, 10, (err, hash) => {
@@ -24,7 +24,6 @@ router.post('/signup', (req, res, next) => {
                     } else {
                         const user = new User({
                             _id: new mongoose.Types.ObjectId(),
-                            email: req.body.email,
                             username: req.body.username,
                             password: hash
 
@@ -50,7 +49,8 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.post('/login', (req, res, next) => {
-    User.find({ email: req.body.email })
+    console.log(req.body.username)
+    User.find({ username: req.body.username })
         .exec()
         .then(user => {
             if (user.length < 1) {
@@ -66,7 +66,7 @@ router.post('/login', (req, res, next) => {
                 }
                 if (result) {
                     const token = jwt.sign({
-                            email: user[0].email,
+                            username: user[0].username,
                             userId: user[0]._id
                         },
                         process.env.JWT_KEY, {
@@ -76,7 +76,7 @@ router.post('/login', (req, res, next) => {
                     return res.status(200).json({
                         message: "Authorization succesful!",
                         token: token,
-                        email: user[0].email,
+                        username: user[0].username,
                         userId: user[0]._id
                     })
                 }

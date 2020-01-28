@@ -9,7 +9,7 @@ const User = require('../models/user');
 // Notes route index (Read All)
 router.get('/', (req, res, next) => {
     Note.find()
-        .select('title content _id email')
+        .select('title content _id')
         .exec()
         .then(docs => {
             const response = {
@@ -45,13 +45,13 @@ router.get('/', (req, res, next) => {
 
 // Notes route POST (Create)
 router.post('/', checkAuth, (req, res, next) => {
-    User.countDocuments({ email: req.body.email }, (err, count) => {
+    User.countDocuments({ username: req.body.username }, (err, count) => {
         if (count >= 1) {
             const note = new Note({
                 _id: new mongoose.Types.ObjectId(),
                 title: req.body.title,
                 content: req.body.content,
-                email: req.body.email,
+                username: req.body.username,
                 langtag: req.body.langtag,
                 dateCreated: Date.now()
             });
@@ -69,7 +69,7 @@ router.post('/', checkAuth, (req, res, next) => {
 
 
                 }).then((result) => {
-                    User.findOne({ email: note.email }, (err, user) => {
+                    User.findOne({ username: note.username }, (err, user) => {
                         if (user) {
                             user.notes.push(note);
                             user.save();
@@ -89,7 +89,7 @@ router.post('/', checkAuth, (req, res, next) => {
                 });
         } else {
             res.status(422).json({
-                message: 'Email doesn\'t exist'
+                message: 'User doesn\'t exist'
             })
         }
     })
