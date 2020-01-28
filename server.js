@@ -1,10 +1,10 @@
 const http = require('http');
 const app = require('./app');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
-const baseUrl = '192.168.178.10'
+
 
 const server = http.createServer(app);
-
-server.listen(port, baseUrl);
+server.listen(port);
+console.log('Server is running on ' + port)
