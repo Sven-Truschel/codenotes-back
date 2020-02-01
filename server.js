@@ -7,8 +7,8 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
 
-var key = fs.readFileSync(__dirname + '/../certs/selfsigned.key');
-var cert = fs.readFileSync(__dirname + '/../certs/selfsigned.crt');
+var key = fs.readFileSync(__dirname + 'certs/selfsigned.key');
+var cert = fs.readFileSync(__dirname + 'certs/selfsigned.crt');
 var options = {
     key: key,
     cert: cert
