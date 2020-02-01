@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="763505a9-fba8-4142-a89f-6b8dca7126c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    <list default="true" id="24536d8c-80b7-4a98-8c67-5bb28919c478" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,42 +12,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1X7KFWwdcKiA0pgHQugSWOoCMLH" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="763505a9-fba8-4142-a89f-6b8dca7126c9" name="Default Changelist" comment="" />
-      <created>1580391590313</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1580391590313</updated>
-      <workItem from="1580391594228" duration="2199000" />
+    <task id="LOCAL-00001" summary="test">
+      <created>1580395118646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580395118646</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="872" y="179" key="#Notifications" timestamp="1580391645041">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="872" y="179" key="#Notifications/0.0.2560.1040@0.0.2560.1040" timestamp="1580391645041" />
-    <state x="781" y="163" key="SettingsEditor" timestamp="1580391660128">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="781" y="163" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1580391660128" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
