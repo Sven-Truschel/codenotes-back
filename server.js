@@ -2,7 +2,7 @@ const https = require('https');
 const app = require('./app');
 const fs = require('fs')
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 443;
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
